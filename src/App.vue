@@ -1,7 +1,7 @@
 <template>
   <div id="container">
-    <Search />
-    <Profile />
+    <Search :nameProfile="nameProfile" @updateProfile="updateProfile" />
+    <Profile :nameProfile="nameProfile" v-show="nameProfile" />
   </div>
 </template>
 
@@ -14,6 +14,17 @@ export default {
   components: {
     Search,
     Profile,
+  },
+  data() {
+    return {
+      nameProfile: "JonathanSaan",
+    }
+  },
+  methods: {
+    updateProfile(newName) {
+      console.log(newName)
+      this.nameProfile = newName;
+    },
   },
 };
 </script>
@@ -28,11 +39,8 @@ export default {
 }
 
 #container {
+  padding: 2rem 0;
   min-height: 100vh;
   background-color: $background;
-
-  h1 {
-    color: $white;
-  }
 }
 </style>

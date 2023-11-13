@@ -1,12 +1,67 @@
 <template>
-  <h1>Search profile github</h1>
-  <form></form>
+  <h1 id="title">Search profile github</h1>
+  <form id="form" @submit.prevent="searchProfile">
+    <input id="formInput" type="text" placeholder="Search" :v-model="nameProfile" />
+    <button id="formButton">Search</button>
+  </form>
 </template>
 
 <script>
 export default {
   name: "Search",
+  methods: {
+    async searchProfile() {
+      this.$emit("updateProfile", this.nameProfile);
+    },
+  },
+  props: {
+    nameProfile: String
+  }
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#title {
+  margin: 0 auto;
+  padding: 0 0 2rem 0;
+  color: $white;
+  text-align: center;
+  font-size: 3rem;
+}
+
+#form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 40rem;
+  
+  #formInput, #formButton {
+    border-radius: .5rem;
+    border: none;
+  }
+
+  #formInput {
+    outline: none;
+    padding: 0 1.5rem;
+    height: 3rem;
+    width: 33rem;
+  }
+
+  #formButton {
+    background-color: $green;
+    cursor: pointer;
+    height: 3rem;
+    width: 5rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($green, 10%);
+    }
+
+    &:active {
+      background-color: darken($green, 20%);
+    }
+  }
+}
+</style>
