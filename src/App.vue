@@ -1,7 +1,7 @@
 <template>
   <div id="container">
-    <Search :nameProfile="nameProfile" @updateProfile="updateProfile" />
-    <Profile :nameProfile="nameProfile" v-show="nameProfile" />
+    <Search :nameProfile="nameProfile" @search-profile="searchProfile" />
+    <Profile :nameProfile="nameProfile" />
   </div>
 </template>
 
@@ -17,12 +17,11 @@ export default {
   },
   data() {
     return {
-      nameProfile: "JonathanSaan",
+      nameProfile: "",
     }
   },
   methods: {
-    updateProfile(newName) {
-      console.log(newName)
+    searchProfile(newName) {
       this.nameProfile = newName;
     },
   },
