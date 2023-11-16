@@ -72,4 +72,19 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  #title {
+    font-size: 2.3rem;
+  }
+
+  #form {
+    width: 100%;
+
+    #formInput {
+      min-width: 15rem;
+      width: 61vw;
+    }
+  }
+}
 </style>
