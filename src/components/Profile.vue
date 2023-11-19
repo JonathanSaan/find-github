@@ -127,10 +127,10 @@ export default {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1006px) {
   #profile {
     margin: 0 auto 4rem auto;
-    height: 20rem;
+    height: 40rem;
     width: 20rem;
   }
 }

@@ -72,12 +72,18 @@ export default {
   margin: 0;
 }
 
+html {
+  background-color: $background;
+}
+
+
+
 #container {
   display: flex;
   flex-direction: column;
   padding: 3rem 0 2rem 0;
   min-height: 100vh;
-  background-color: $background;
+  height: auto;
 
   #containerMain {
     display: flex;
@@ -87,13 +93,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 997px) {
-  #container > #containerMain {
-    padding: 0 3vw;
-  }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1006px) {
   #container {
     padding: 3rem 2rem;
 
@@ -102,7 +102,7 @@ export default {
       margin: 0;
       padding: 3rem 0;
       min-height: 50rem;
-      height: 120vw;
+      height: 50vh;
       flex-direction: column;
     }
   }

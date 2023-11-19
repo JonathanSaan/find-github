@@ -145,6 +145,15 @@ export default {
   }
 }
 
+@media screen and (max-width: 1006px) {
+  #dashboard {
+    margin: 0 auto;
+    height: 48vw;
+    min-width: 20rem;
+    width: 70vw;
+  }
+}
+
 @media screen and (max-width: 997px) {
   #dashboard {
     height: 20rem;
@@ -154,9 +163,6 @@ export default {
 
 @media screen and (max-width: 768px) {
   #dashboard {
-    margin: 0 auto;
-    height: 48vw;
-    min-width: 20rem;
     width: 87vw;
   }
 }
