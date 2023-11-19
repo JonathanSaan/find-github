@@ -51,6 +51,9 @@ export default {
   #formInput {
     outline: none;
     padding: 0 1.5rem;
+    background-color: $background;
+    border: 1px solid $gray;
+    color: $white;
     caret-color: $green;
     height: 3rem;
     width: 33rem;
@@ -73,7 +76,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1006px) {
   #title {
     font-size: 2.3rem;
   }
