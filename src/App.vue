@@ -76,8 +76,6 @@ html {
   background-color: $background;
 }
 
-
-
 #container {
   display: flex;
   flex-direction: column;

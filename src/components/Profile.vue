@@ -115,12 +115,12 @@ export default {
 }
 
 #loading, #noprofile {
+  display: flex;
   color: $white;
+  width: 100%;
   font-size: 2rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
 
   #loadingIcon {
     width: 4rem;
@@ -130,8 +130,12 @@ export default {
 @media screen and (max-width: 1006px) {
   #profile {
     margin: 0 auto 4rem auto;
-    height: 40rem;
-    width: 20rem;
+    height: 45rem;
+    width: 25rem;
+  }
+
+  #noprofile {
+    font-size: 1.5rem;
   }
 }
 </style>
