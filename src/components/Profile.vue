@@ -117,6 +117,7 @@ export default {
 #loading, #noprofile {
   display: flex;
   color: $white;
+  height: 30rem;
   width: 100%;
   font-size: 2rem;
   justify-content: center;
@@ -134,7 +135,7 @@ export default {
     width: 25rem;
   }
 
-  #noprofile {
+  #loading, #noprofile {
     font-size: 1.5rem;
   }
 }
