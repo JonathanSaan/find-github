@@ -1,8 +1,8 @@
 <template>
-  <h1 id="title">Search profile github</h1>
-  <form action="" id="form" @submit.prevent="searchProfile">
-    <input id="formInput" type="text" placeholder="Search" v-model="locaNameProfile" />
-    <button id="formButton">Search</button>
+  <h1 class="pb-8 mx-auto text-5xl text-center text-white max-md:text-[2.3rem]">Search profile github</h1>
+  <form action="" class="flex justify-between items-center mx-auto lg:w-[40rem] max-lg:w-full" @submit.prevent="searchProfile">
+    <input class="mr-10 px-6 h-12 w-full text-white border rounded-md outline-none bg-stone-950 border-zinc-500 caret-green-500" type="text" placeholder="Search" v-model="locaNameProfile" />
+    <button class="w-28 h-12 bg-green-500 border-none rounded-md hover:bg-green-600 active:bg-green-700">Search</button>
   </form>
 </template>
 
@@ -26,68 +26,3 @@ export default {
   emits: ["searchProfile"]
 };
 </script>
-
-<style lang="scss" scoped>
-#title {
-  margin: 0 auto;
-  padding: 0 0 2rem 0;
-  color: $white;
-  text-align: center;
-  font-size: 3rem;
-}
-
-#form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  width: 40rem;
-  
-  #formInput, #formButton {
-    border-radius: .5rem;
-    border: none;
-  }
-
-  #formInput {
-    outline: none;
-    padding: 0 1.5rem;
-    background-color: $background;
-    border: 1px solid $gray;
-    color: $white;
-    caret-color: $green;
-    height: 3rem;
-    width: 33rem;
-  }
-
-  #formButton {
-    background-color: $green;
-    cursor: pointer;
-    height: 3rem;
-    width: 5rem;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: darken($green, 10%);
-    }
-
-    &:active {
-      background-color: darken($green, 20%);
-    }
-  }
-}
-
-@media screen and (max-width: 1006px) {
-  #title {
-    font-size: 2.3rem;
-  }
-
-  #form {
-    width: 100%;
-
-    #formInput {
-      min-width: 15rem;
-      width: 61vw;
-    }
-  }
-}
-</style>

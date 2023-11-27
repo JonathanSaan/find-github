@@ -1,7 +1,7 @@
 <template>
-  <div id="container">
+  <div class="flex flex-col min-h-screen pt-12 pb-8 bg-stone-950 max-md:px-8 max-lg:px-40 max-lg:py-12">
     <Search :queryName="queryName" @search-profile="searchProfile" />
-    <main id="containerMain">
+    <main class="flex justify-between lg:px-16 my-auto max-lg:m-0 max-lg:py-12 max-lg:min-h-[50rem] max-lg:h-[50vh] max-lg:flex-col">
       <Profile :queryName="queryName" :dataProfile="dataProfile" :loading="loading" @get-profile-data="getProfileData" />
       <Dashboard :queryName="queryName" :dataProfile="dataProfile" :dataDashboard="dataDashboard" :loading="loading" @get-profile-data="getProfileData" />
     </main>
@@ -62,47 +62,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: Helvetica, Arial, sans-serif;
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  background-color: $background;
-}
-
-#container {
-  display: flex;
-  flex-direction: column;
-  padding: 3rem 0 2rem 0;
-  min-height: 100vh;
-  height: auto;
-
-  #containerMain {
-    display: flex;
-    justify-content: space-between;
-    margin: auto 0;
-    padding: 0 5vw;
-  }
-}
-
-@media screen and (max-width: 1006px) {
-  #container {
-    padding: 3rem 2rem;
-
-    #containerMain {
-      justify-content: space-between;
-      margin: 0;
-      padding: 3rem 0;
-      min-height: 50rem;
-      height: 50vh;
-      flex-direction: column;
-    }
-  }
-}
-</style>

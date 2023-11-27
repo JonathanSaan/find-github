@@ -1,6 +1,6 @@
 <template>
-  <div id="dashboard" v-show="queryName && dataProfile.login && dataDashboard && !loading">
-    <h3 id="dashboardTitle">
+  <div class="flex flex-col my-auto max-lg:mx-auto h-[25rem] max-mb:h-[17rem] max-lg:h-[15rem] w-[100%] lg:w-[45rem] items-center opacity-0 animate-fadeIn text-white" v-show="queryName && dataProfile.login && dataDashboard && !loading">
+    <h3 class="mb-auto text-white text-2xl">
       {{ this.dataProfile.login }}'s Contribution Graph
     </h3>
     <canvas id="dashboardChart"></canvas>
@@ -111,59 +111,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-@keyframes fadeInAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-#dashboard {
-  display: flex;
-  flex-direction: column;
-  margin: auto 0;
-  height: 25rem;
-  width: 45rem;
-  align-items: center;
-  opacity: 0;
-  animation: fadeInAnimation 1.3s ease-in-out forwards;
-  color: $white;
-
-  #dashboardTitle {
-    margin: 0 0 auto 0;
-    color: $white;
-    font-size: 1.5rem;
-  }
-
-  #dashboardChart {
-    height: 25rem;
-    width: 25rem;
-  }
-}
-
-@media screen and (max-width: 1006px) {
-  #dashboard {
-    margin: 0 auto;
-    height: 48vw;
-    min-width: 20rem;
-    width: 70vw;
-  }
-}
-
-@media screen and (max-width: 997px) {
-  #dashboard {
-    height: 20rem;
-    width: 65vw;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #dashboard {
-    width: 87vw;
-  }
-}
-</style>
