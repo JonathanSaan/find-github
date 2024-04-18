@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col max-lg:mx-auto max-lg:mb-16 h-[30rem] max-lg:h-auto w-[30rem] max-lg:w-[25rem] items-center opacity-0 text-white animate-fadeIn" v-show="queryName && dataProfile.login && !loading">
     <img class="rounded-full mb-8 h-60 w-60" :src="dataProfile ? dataProfile.avatar_url : null" alt="profile image" draggable="false" />
-    <a class="no-underline text-white text-[2rem]" :href="dataProfile.html_url" target="_blank" rel="noopener noreferrer">
+    <a class="no-underline text-white hover:text-green-500 text-[2rem]" :href="dataProfile.html_url" target="_blank" rel="noopener noreferrer">
       {{ dataProfile.login }}
     </a>
     <h2 class="mt-2 mb-4 text-[.8rem]">{{ dataProfile.bio }}</h2>
